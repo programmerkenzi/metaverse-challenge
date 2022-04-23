@@ -21,20 +21,20 @@ function Messages() {
 
 
     )
-    console.log(data)
+
 
 
     return (
         <div className="pb-56">
             <div className="my-5"></div>
             <ByMoralis variant="dark" style={{ marginLeft: "auto", marginRight: "auto" }} />
-            <div className="space-y-10 p-4">
+            <div className="p-4 space-y-10">
                 {data.map(message => <Message message={message} />)}
             </div>
             <div className="flex justify-center">
                 <SentMessage endOfMessagesRef={endOfMessagesRef} />
             </div>
-            <div ref={endOfMessagesRef} className="text-center text-gray-400 mt-5">
+            <div ref={endOfMessagesRef} className="mt-5 text-center text-gray-400">
                 <p>You're up to date {user.getUsername()}!</p>
             </div>
         </div>
